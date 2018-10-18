@@ -1,5 +1,3 @@
-var army;
-
 function DOT(obj, prop) {
 	if(typeof obj !== "object" ||  typeof prop !== "string" || typeof obj === null) {
 		console.log("Error");
@@ -33,7 +31,7 @@ var vanyaIvanov = {
 	
 }
 	
-}
+
 	var annPetrova = {
 	name: "ann",
 	sex: "female",
@@ -53,13 +51,16 @@ var vanyaIvanov = {
 		
 		if (obj.age >= minAgeForArmy && obj.age < maxAgeForArmy && obj.sex === GENDER)			{ 
 			console.log(obj.name + " welcomeToHell");
+			return true;
 			} 
 		else if(obj.sex === "female") {
 			
 			console.log(obj.name + " You are a woman");
+			return false;
 		}
 		else {
 			console.log("Who are you");
+			return false;
 		}
 		
 	}
@@ -68,15 +69,13 @@ var vanyaIvanov = {
 	var studentMark =	(obj.listExam.physics + obj.listExam.geography + obj.listExam.mathematics) / 3;
 		return studentMark;
 	}
-var annPetrovaMediumMark;
-var vanyaIvanovMediumMark;
-var petrSidorovMediumMark;
-checkMediumMark(annPetrova) = annPetrovaMediumMark;
-checkMediumMark(vanyaIvanov) = vanyaIvanovMediumMark;
-checkMediumMark(petrSidorov) = petrSidorovMediumMark;
+var annPetrovaMediumMark = checkMediumMark(annPetrova); 
+var vanyaIvanovMediumMark = checkMediumMark(vanyaIvanov);
+var petrSidorovMediumMark = checkMediumMark(petrSidorov);
+ 
 
 function checkToNextCourse(obj) {
-	if(studentMark >= 7) {
+	if(checkMediumMark(obj) >= 7) {
 		console.log(obj.name + " Congratulations, welcome to next course" );
 		var newCurrentMoney = obj.currentMoney + 3.864;
 		console.log(newCurrentMoney.toFixed(2))
@@ -90,3 +89,6 @@ function checkToNextCourse(obj) {
 		}
 	}
 }
+var annPetrovaCheckToNextCourse = checkToNextCourse(annPetrova); 
+var vanyaIvanovCheckToNextCourse = checkToNextCourse(vanyaIvanov);
+var petrSidorovCheckToNextCourse = checkToNextCourse(petrSidorov);
