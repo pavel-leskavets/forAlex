@@ -78,7 +78,7 @@ function checkToNextCourse(obj) {
 	if(checkMediumMark(obj) >= 7) {
 		console.log(obj.name + " Congratulations, welcome to next course" );
 		var newCurrentMoney = obj.currentMoney + 3.864;
-		console.log(newCurrentMoney.toFixed(2))
+		console.log(obj.name + " Your new current money " + newCurrentMoney.toFixed(2))
 	}
 	else {
 		if(checkValidForService (obj) === true) {
