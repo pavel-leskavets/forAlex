@@ -137,7 +137,7 @@ function StudentFactory () {
 	 var counter = 0;
 	return function (name, age, gender, course, cashAmount, grades){
 		return Student()	
-		counter++
+		
 	}
  function Student (name){
 this.name = name;
@@ -154,7 +154,7 @@ var _cashAmount = cashAmount;
 var _grades = grades;
 var _id = counter;
 }	
-
+counter++
 }
 
 
