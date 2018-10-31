@@ -133,6 +133,45 @@ getAverageGrade: getAverageGrade ,
 checkIfValidForArmy: checkIfValidForArmy,
 changeCashAmount: changeCashAmount
 } 
+function StudentFactory () {
+	 var counter = 0;
+	return function (name, age, gender, course, cashAmount, grades){
+		return Student()	
+		counter++
+	}
+ function Student (name){
+this.name = name;
+	this.age = age;
+	this.gender = gender;
+	this.course = course;
+	this.cashAmount = cashAmount;
+	this.grades = grades;
+var _name = name;
+var _age = age;
+var _gender = gender;
+var _course = course;
+var _cashAmount = cashAmount;
+var _grades = grades;
+var _id = counter;
+}	
+
+}
+
+
+
+  
+ 
+
+
+var studentFactory = FactoryName();
+var student1 = studentFactory('Grigory');
+
+
+
+
+
+
+
 
 var studentsPassedExams = getStudentsPassedExams(firstCourseStudents, MIN_AVERAGE_GRADE);
 
